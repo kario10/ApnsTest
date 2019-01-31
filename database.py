@@ -18,16 +18,16 @@ def checkUpdate():
         global current_rowcount_result
         global first_check
         coon = pymysql.connect(
-            host='www.bishopallenacademy.com',
-            user='Baraam',
-            password='Baraam_CS_1',
-            db='schoolAppDataBase',
-            charset='utf8mb4',
+            host='',
+            user='',
+            password='',
+            db='',
+            charset='',
             cursorclass=pymysql.cursors.DictCursor
         )
         with coon.cursor() as cursor:
             #read a single record,check everything in the database
-            sql = "SELECT * FROM  `longTermAnnouncements`"
+            sql = "SELECT * FROM  ``"
             cursor.execute(sql)
             result = cursor.fetchall()
             #if there is no defferent, it will not call the APNs to push notification.
